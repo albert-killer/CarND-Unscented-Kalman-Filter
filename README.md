@@ -4,7 +4,7 @@
 
 This is the project repository for **Project No. 2 Unscented Kalman Filter**, part of Term 2 _Sensor Fusion_ of Udacity Self-Driving Car Nanodegree program, submitted by Albert Killer in May 2017. 
 
-As Unscented Kalman Filter (UKF) was implemented in C++ using the CTRV motion model to process simulated LIDAR and RADAR measurements provided by Udacity. In doing so the position and velocity of an object, moving around a vehicle equiped with those sensors, can be detected with even higher accuracy than achieved by the EKF approach:
+As Unscented Kalman Filter (UKF) was implemented in C++ using the **CTRV motion model** to process simulated LIDAR and RADAR measurements provided by Udacity. In doing so the position and velocity of an object, moving around a vehicle equiped with those sensors, can be detected with even higher accuracy than achieved by the EKF approach:
 
 ```
 Accuracy
