@@ -7,11 +7,12 @@ This is the project repository for **Project No. 2 Unscented Kalman Filter**, pa
 As Unscented Kalman Filter (UKF) was implemented in C++ using the CTRV motion model to process simulated LIDAR and RADAR measurements provided by Udacity. In doing so the position and velocity of an object, moving around a vehicle equiped with those sensors, can be detected with even higher accuracy than achieved by the EKF approach:
 
 ```
-Accuracy - RMSE:    Accuracy - RMSE:   
-px: 0.0972256       px: 0.0972256
-py: 0.0853761
-vx: 0.4508550
-vy: 0.4395880
+Accuracy
+**RMSE EKF:**           **RMSE UKF:**
+px: 0.0972256       px: 0.0660628
+py: 0.0853761       py: 0.0797275
+vx: 0.4508550       vx: 0.2705050
+vy: 0.4395880       vy: 0.2346320
 ```
 I use a Kalman Filter for LIDAR data. In order to handle the **nonlinear measurement function** _h_(_x_) of RADAR data I apply an Extended Kalmand Filter (EKF). The EKF uses a **linear approximation** of _h_(_x_) and applies _First Order Taylor Expansion_ in order to retrieve a Gaussian distribution again.    
 
