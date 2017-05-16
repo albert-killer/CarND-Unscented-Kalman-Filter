@@ -8,12 +8,15 @@ As Unscented Kalman Filter (UKF) was implemented in C++ using the CTRV motion mo
 
 ```
 Accuracy
-**RMSE EKF:**           **RMSE UKF:**
+---------------------------------
+RMSE EKF:           RMSE UKF:
+---------------------------------
 px: 0.0972256       px: 0.0660628
 py: 0.0853761       py: 0.0797275
 vx: 0.4508550       vx: 0.2705050
 vy: 0.4395880       vy: 0.2346320
 ```
-I use a Kalman Filter for LIDAR data. In order to handle the **nonlinear measurement function** _h_(_x_) of RADAR data I apply an Extended Kalmand Filter (EKF). The EKF uses a **linear approximation** of _h_(_x_) and applies _First Order Taylor Expansion_ in order to retrieve a Gaussian distribution again.    
 
-Want to know more about Extended Kalman Filters? Have a look at this one: https://en.wikipedia.org/wiki/Extended_Kalman_filter
+A standard Kalman filter can only handle linear equations. Both EKF and UKF handle **non-linear equations**. The difference between EKF and UKF is how they do it: Instead of linearizing non-linear functions the UKF takes representative points, called _Sigma points_ from a Gaussian distribution and inserts them into non-linear equations, providing a effective approximation, at the same time avoiding _Jacobian matrix_.
+
+Want to know more about Unscented Kalman Filters? Have a look at this one: https://en.wikipedia.org/wiki/Kalman_filter#Unscented_Kalman_filter
