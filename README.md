@@ -11,10 +11,10 @@ Accuracy
 ---------------------------------
 RMSE EKF:           RMSE UKF:
 ---------------------------------
-px: 0.0972256       px: 0.0660628
-py: 0.0853761       py: 0.0797275
-vx: 0.4508550       vx: 0.2705050
-vy: 0.4395880       vy: 0.2346320
+px: 0.0972256       px: 0.0698963
+py: 0.0853761       py: 0.0799559
+vx: 0.4508550       vx: 0.2753580
+vy: 0.4395880       vy: 0.2323950
 ```
 
 A standard Kalman filter can only handle linear equations. Both EKF and UKF handle **non-linear equations**. The difference between EKF and UKF is how they do it: Instead of linearizing non-linear functions the UKF takes representative points, called _Sigma points_ from a Gaussian distribution and inserts them into non-linear equations, providing a effective approximation, at the same time avoiding _Jacobian matrix_.
